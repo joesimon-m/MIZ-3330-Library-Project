@@ -3,8 +3,11 @@ package edu.mu.library;
 public class LibraryApp {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
+		System.out.println("tester");
+		if (true) {
+			System.out.println("why no work");
+		}
 	}
 
 }
