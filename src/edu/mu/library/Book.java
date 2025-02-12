@@ -129,4 +129,16 @@ public class Book {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
+	/**
+	 * Changes the default way any object book is sent into output 
+	 * when called
+	 * 
+	 * @return
+	 * 			String in which contains the way we want each book to be printed
+	 */
+	@Override
+	public String toString() {
+		return this.title + " by " + this.author + " (ISBN: " + this.ISBN + ", $" + this.price + ")";
+	}
 }	
