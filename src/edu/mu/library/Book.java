@@ -44,10 +44,15 @@ public class Book {
 	 * 			Object of type Books that contains the values we want copied
 	 */
 	public Book(Book book) {
-		this.title = book.getTitle();
-		this.author = book.getAuthor();
-		this.ISBN = book.getISBN();
-		this.price = book.getPrice();
+		if(book == null) {
+			System.out.println("Fatal Error. Book object was null.");
+			System.exit(0);
+		} else {
+			this.title = book.getTitle();
+			this.author = book.getAuthor();
+			this.ISBN = book.getISBN();
+			this.price = book.getPrice();
+		}
 	}
 	
 	/**
@@ -155,7 +160,9 @@ public class Book {
 	@Override
 	public boolean equals(Object other) {
 		Book book = (Book)other;
-		if(this.title.equals(book.getTitle()) && 
+		if(other == null) {
+			return false;
+		} else if(this.title.equals(book.getTitle()) && 
 				this.author.equals(book.getAuthor()) && 
 				this.ISBN.equals(book.getISBN()) &&
 				this.price == book.getPrice()) {
