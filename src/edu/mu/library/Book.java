@@ -141,4 +141,27 @@ public class Book {
 	public String toString() {
 		return this.title + " by " + this.author + " (ISBN: " + this.ISBN + ", $" + this.price + ")";
 	}
+	
+	/**
+	 * Compares a given Object to this object. True is returned if each variable is the same,
+	 * and false is returned otherwise
+	 * 
+	 * @param other
+	 * 		Object to be compared with this book object
+	 * @return
+	 * 		type boolean indicating whether the given
+	 * 		object is equal to this object
+	 */
+	@Override
+	public boolean equals(Object other) {
+		Book book = (Book)other;
+		if(this.title.equals(book.getTitle()) && 
+				this.author.equals(book.getAuthor()) && 
+				this.ISBN.equals(book.getISBN()) &&
+				this.price == book.getPrice()) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 }	
