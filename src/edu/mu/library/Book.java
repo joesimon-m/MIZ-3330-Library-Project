@@ -35,4 +35,19 @@ public class Book {
 		this.ISBN = ISBN;
 		this.price = price;
 	}
+	
+	/**
+	 * Copy constructor which copies the values of each variable inside the Book object 
+	 * and stores them to the variables of this object
+	 * 
+	 * @param book
+	 * 			Object of type Books that contains the values we want copied
+	 */
+	public Book(Book book) {
+		this.title = book.getTitle();
+		this.author = book.getAuthor();
+		this.ISBN = book.getISBN();
+		this.price = book.getPrice();
+	}
+	
 }	
