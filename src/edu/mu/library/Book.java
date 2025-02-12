@@ -50,4 +50,83 @@ public class Book {
 		this.price = book.getPrice();
 	}
 	
+	/**
+	 * Getter method for the title
+	 * 
+	 * @return
+	 * 			String value of this variable title
+	 */
+	public String getTitle() {
+		return title;
+	}
+	
+	/**
+	 * Setter method for the title
+	 * 
+	 * @param title
+	 * 			title variable to be assigned to this variable title
+	 */
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	/**
+	 * Getter method for the author
+	 * 
+	 * @return
+	 * 			String value of this variable author
+	 */
+	public String getAuthor() {
+		return author;
+	}
+	
+	/**
+	 * Setter method for the author
+	 * 
+	 * @param author
+	 * 			author variable to be assigned to this author variable
+	 */
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	/**
+	 * Getter method for the ISBN
+	 * 
+	 * @return
+	 * 			String value of this variable ISBN
+	 */
+	public String getISBN() {
+		return ISBN;
+	}
+	
+	/**
+	 * Setter method for the ISBN
+	 * 
+	 * @param ISBN
+	 * 			ISBN variable to be assigned to this ISBN variable
+	 */
+	public void setISBN(String ISBN) {
+		this.ISBN = ISBN;
+	}
+	
+	/**
+	 * Getter method for the price
+	 * 
+	 * @return
+	 * 			Double value of this variable price
+	 */
+	public double getPrice() {
+		return price;
+	}
+	
+	/**
+	 * Setter method for the price
+	 * 
+	 * @param price
+	 * 			price variable to be assigned to this price variable
+	 */
+	public void setPrice(double price) {
+		this.price = price;
+	}
 }	
