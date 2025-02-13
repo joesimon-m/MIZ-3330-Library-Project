@@ -159,16 +159,13 @@ public class Book {
 	 */
 	@Override
 	public boolean equals(Object other) {
-		Book book = (Book)other;
-		if(other == null) {
-			return false;
-		} else if(this.title.equals(book.getTitle()) && 
-				this.author.equals(book.getAuthor()) && 
-				this.ISBN.equals(book.getISBN()) &&
-				this.price == book.getPrice()) {
-			return true;
-		} else {
-			return false;
+	    if (other == null || !(other instanceof Book)) { // Added instanceof check
+	        return false;
+	    }
+	    Book book = (Book) other;
+	    return this.title.equals(book.getTitle()) &&
+	           this.author.equals(book.getAuthor()) &&
+	           this.ISBN.equals(book.getISBN()) &&
+	           this.price == book.getPrice();
 		}
 	}
-}	

@@ -35,11 +35,11 @@ public class Library {
         for (int i = 0; i < books.size(); i++) {
             if (books.get(i).getISBN().equals(ISBN)) {
                 books.remove(i);
-                System.out.println("Book removed successfully.");
+                System.out.println("Book removed successfully: ISBN " + ISBN);
                 return true;
             }
         }
-        System.out.println("Book not found.");
+        System.out.println("Error: Book with ISBN " + ISBN + " not found.");
         return false;
     }
 
@@ -55,6 +55,7 @@ public class Library {
                 return book;
             }
         }
+        System.out.println("Book not found: " + title);
         return null;
     }
 
@@ -72,3 +73,4 @@ public class Library {
         }
     }
 }
+
