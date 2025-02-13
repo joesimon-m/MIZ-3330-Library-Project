@@ -21,9 +21,16 @@ public class Library {
      * @param book The book to add.
      */
     public void addBook(Book book) {
+        for (Book b : books) {
+            if (b.getISBN().equals(book.getISBN())) {
+                System.out.println("Error: A book with ISBN " + book.getISBN() + " already exists in the library.");
+                return; // Stop the method if a duplicate is found
+            }
+        }
         books.add(book);
         System.out.println("Book added: " + book.getTitle());
     }
+
 
     /**
      * Removes a book by its ISBN number.

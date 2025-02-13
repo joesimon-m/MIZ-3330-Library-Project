@@ -13,10 +13,17 @@ public class LibraryApp {
         // Step 2: Create Book objects (Love these books, give them a read if you haven't)
         Book book1 = new Book("The Martian", "Andy Weir", "1234567890", 12.99);
         Book book2 = new Book("Project Hail Mary", "Andy Weir", "0987654321", 9.99);
+        //adding identical book for testing
+        Book book3 = new Book("The Martian", "Andy Weir", "1234567890", 12.99);
+        Book book4 = new Book("Kneck Above of the Water", "Our Group", "1375420986", 15.99);
+
+
 
         // Step 3: Add books to the library
         library.addBook(book1);
         library.addBook(book2);
+        library.addBook(book3);
+        library.addBook(book4);
 
         // Step 4: Display all books in the library
         System.out.println("\nCurrent Library Books:");
